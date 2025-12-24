@@ -1,0 +1,17 @@
+#projectsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border:2px solid red;
+    min-width:30px; /*CONFIGURE THIS*/
+    width:100%;
+    
+    
+    padding:0 10% 0 10%;
+    background: transparent;
+
+
+  
+}

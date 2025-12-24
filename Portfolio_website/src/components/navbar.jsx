@@ -18,7 +18,7 @@ const Navbar = () => {
                 </div>
                 <div className="navItem">
                     <GiSkills size="35" className="navIcon" />
-                    <a href="#skills" onClick={()=> preventDefault()}>Skills</a>
+                    <a href="#skillsContainer" onClick={()=> preventDefault()}>Skills</a>
                 </div>
                 <div className="navItem">
                     <FaDiagramProject size="35" className="navIcon" />

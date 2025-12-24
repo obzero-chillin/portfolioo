@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar.jsx";
 import Homie from "./components/home.jsx";
+import Skills from "./components/skills.jsx";
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
         </header>
 
         <Homie />
+        <Skills/>
         
         <footer></footer>
       </main>

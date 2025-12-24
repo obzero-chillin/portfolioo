@@ -1,0 +1,28 @@
+#skillsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border:2px solid red;
+    min-width:30px; /*CONFIGURE THIS*/
+    width:100%;
+    
+    
+    text-align: left;
+    padding:0 10% 0 10%;
+    background: transparent;
+
+
+  
+}
+
+.skillsIcons{
+    border:1px solid blue;
+    padding:0 10% 0 10%;;
+}
+
+.s_icon{
+    margin: 30px;
+    font-size: 50px;
+    color:hsl(167.69,95.12%,8.04%);
+}

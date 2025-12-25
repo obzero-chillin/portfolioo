@@ -8,7 +8,7 @@ import ProjectCard from "./subComponents/projectCard.jsx";
 const Projects = ()=>{
     return(
         <>                                                                                                  
-        <div id="projectsContainer">
+        <div id="projects">
             <h1>Projects</h1>
             <div id="allProjects">
                 <ProjectCard

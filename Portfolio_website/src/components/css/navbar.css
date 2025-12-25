@@ -25,13 +25,15 @@
     border-radius: 10px;
     padding: 5px;
 
-    width:9em;
+    width:8em;
     
 }
 
-.navItem>a{
+.navItem>span{
     text-decoration: none;
     color: inherit;
     margin-left:1em;
-}
+    
+} 
+
 

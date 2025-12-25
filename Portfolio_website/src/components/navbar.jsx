@@ -30,7 +30,7 @@ const Navbar = ({setView}) => {
                 <ul>
                 <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/')}>
                     <RiHome9Fill size="35" className="navIcon" />
-                    <a href="/" >Home</a>
+                    <span href="/" >Home</span>
                 </div>
                 <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/', '#skills')}>
                     <GiSkills size="35" className="navIcon" />

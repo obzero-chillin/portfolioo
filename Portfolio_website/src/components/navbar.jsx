@@ -7,33 +7,49 @@ import { VscReferences } from "react-icons/vsc";
 
 
 
-const Navbar = ({setActiveSession}) => {
+const Navbar = ({setView}) => {
+    const navigateTo = (e, path,hash="") => {
+    e.preventDefault(); 
+    window.history.pushState({}, '', path+hash);
+    setView(path); 
+
+    if(hash){
+        const element = document.querySelector(hash)
+        if(element){
+            element.scrollIntoView({behavior:"smooth"});
+        }
+    }else{
+        window.scrollTo({top:0, left:0, behavior:"smooth"});
+
+    }
+  };
   return (
     <div className="navContainer">
         <nav className="navbar">
             <div>
                 <ul>
-                <div className="navItem" role="button" onClick={setActiveSession("home")}>
+                <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/')}>
                     <RiHome9Fill size="35" className="navIcon" />
-                    <a href="#home" onClick={() => preventDefault()}>Home</a>
+                    <a href="/" >Home</a>
                 </div>
-                <div className="navItem" role="button" onClick={setActiveSession("skills")}>
+                <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/', '#skills')}>
                     <GiSkills size="35" className="navIcon" />
-                    <a href="#skillsContainer" onClick={()=> preventDefault()}>Skills</a>
-                </div>
-                <div className="navItem" role="button" onClick={setActiveSession("projects")}>
+                    <span>Skills</span>
+                </div>    
+              
+                <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/', '#projects')}>
                     <FaDiagramProject size="35" className="navIcon" />
-                    <a href="#projects" onClick={()=> preventDefault()}>Projects</a>
+                    <span >Projects</span>
                 </div>
-                <div className="navItem" role="button" onClick={setActiveSession("references")}>
+                <div className="navItem" role="button" onClick={(e) => navigateTo(e, '/references')}>
                     <VscReferences size="35" className="navIcon" />
-                    <a href="#references" onClick={()=> preventDefault()}>References</a>
+                    <span href="/references">References</span>
                 </div>
-                <div className="navItem" role="button" >
+                <div className="navItem" role="button" href="https://github.com/obzero-chillin" target="_blank" rel="noopener noreferrer">
                     <FaGithub size="35" className="navIcon" />
-                    <a href="#github" onClick={()=> preventDefault()}>GitHub</a>
+                    <span> GitHub</span>
                 </div>
-                <div className="navItem" role="button" onClick={setActiveSession("contact")}>
+                <div className="navItem" role="button">
                     <RiContactsFill size="35" className="navIcon" />
                     <a href="#contact" onClick={()=> preventDefault()}>Contact</a>
                 </div>

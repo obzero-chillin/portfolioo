@@ -1,5 +1,5 @@
 
-const references = ()=>{
+const References = ()=>{
     return(
         <div id="references">
             <h1>References</h1>
@@ -7,4 +7,4 @@ const references = ()=>{
     )
 }
 
-export default references;
+export default References;

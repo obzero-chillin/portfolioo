@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    
 
     width:100%;
     
@@ -13,4 +14,13 @@
 
 
   
+}
+#allProjects{
+    display: flex;
+    width:90%;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    
+    border:solid rgb(158, 14, 14) 1px;
 }

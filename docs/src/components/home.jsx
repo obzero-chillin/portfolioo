@@ -20,7 +20,7 @@ const Homie = () => {
                 I'm passionate about building efficient and scalable web applications, programmes that solve real-world problems.
             </h3>
 
-            <div className="cert" role="button" onClick={()=>{window.open(URL='./src/assets/fcc.pdf', '_blank')}}>
+            <div className="cert" role="button" onClick={()=>{window.open(URL='./src/assets/fcc.png', '_blank')}}>
                 FreeCodeCamp Certification
                 <div className="certArrCont">
 

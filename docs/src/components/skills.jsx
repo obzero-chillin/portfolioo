@@ -1,4 +1,5 @@
 import './css/skills.css';
+import { useEffect } from 'react';
 import { FaHtml5,FaCss3Alt,FaPython,FaPhp,FaDartLang,FaFlutter,FaGitAlt } from "react-icons/fa6";
 import { IoLogoJavascript,IoLogoNodejs } from "react-icons/io5";
 import { BsFiletypeSql } from "react-icons/bs";
@@ -9,6 +10,25 @@ import { LuGithub } from "react-icons/lu";
 
 
 const Skills = ()=>{
+    useEffect(() => {
+    const skills = document.querySelector("#skills");
+    if (!skills) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(skills);
+
+    return () => observer.disconnect();
+  }, []);
+
     return(
         <>                                                                                                   
         <div id="skills" >
